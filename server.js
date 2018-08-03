@@ -16,6 +16,8 @@ app.route('/')
     res.sendFile(process.cwd() + '/views/index.html');
   });
 
-app.listen(process.env.PORT || 3000, () => {
-  console.log("Listening on port " + process.env.PORT);
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+  console.log("Listening on port " + port);
 });
